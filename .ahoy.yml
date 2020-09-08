@@ -48,3 +48,60 @@ commands:
   up:
     cmd: "docker-compose up -d"
     usage: Start the docker-compose containers.
+
+  sync-start:
+    cmd: "docker-sync start"
+    usage: Docker Sync Start.
+
+  sync-logs:
+    cmd: "docker-sync logs"
+    usage: Docker Sync show logs.
+
+  sync-sync:
+    cmd: "docker-sync sync"
+    usage: Docker Sync Sync.
+
+  sync-stop:
+    cmd: "docker-sync stop"
+    usage: Docker Sync Stop.
+
+  sync-clean:
+    cmd: "docker-sync clean"
+    usage: Docker Sync Clean.
+
+  restart-sync:
+    cmd: "docker-sync stop && docker-sync start"
+    usage: Restart Docker Sync.
+
+  sql-dev-imp:
+    cmd: "drush sql-cli < ../mariadb-init/dev_db_12.sql"
+    usage: Import dev DB.
+
+  sql-live-imp-d7:
+    cmd: "mysql -u drupal -pdrupal -h mariadb2 drupal7 < ../mariadb-init/live_d7_db.sql"
+    usage: Import Live D7 DB.
+
+  docker-clean-1:
+    cmd: "docker stop $(docker ps -aq)"
+    usage: Docker Stop running containers.
+
+  docker-clean-2:
+    cmd: "docker container prune"
+    usage: Docker Remove all stop containers.
+
+  docker-clean-3:
+    cmd: "docker volume rm $(docker volume ls -qf dangling=true)"
+    usage: Docker Clear orphaned volumes.
+
+  docker-clean-4:
+    cmd: "docker image prune"
+    usage: Docker Image prune.
+
+  coding-standards:
+    cmd: "./vendor/bin/phpcs --standard=phpcs.ruleset.xml --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md"
+    usage: Docker Image prune.
+
+  ssh-php:
+    cmd: "docker exec -it  recombee_drupal8_project_php /bin/bash && cd docroot"
+    usage: SSH Login in PHP container.
+
