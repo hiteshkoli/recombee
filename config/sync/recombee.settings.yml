@@ -1,0 +1,9 @@
+site_id: umami
+base_url: 'http://drupal.docker.localhost:8000'
+account_id: technocrat-dev
+public_token: zy4sdT382n2rL3VTvb5JLxp0yWNFVnaw19YdNon3ulEUXvl0CIbDNVtBqnjopkzL
+client:
+  base_uri: ''
+  use_https: false
+_core:
+  default_config_hash: gi6_6imFkWjQTYKzf8Nd1YjuSHZOa7YO6rBUy-N2nvc

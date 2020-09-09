@@ -1,0 +1,12 @@
+uuid: 2fbf20f9-cd9c-4e53-a8d9-da27d32f7820
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: UcWQWYgwhS23gSbklT6rN_MnalDvby-xDzzKtT3jalc
+id: media.responsive_3x2
+label: 'Responsive 3x2'
+targetEntityType: media
+cache: true

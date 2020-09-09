@@ -1,0 +1,20 @@
+uuid: 00a88c8e-106f-407e-a93e-37692441beeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - recombee
+  theme:
+    - umami
+id: recombeetracker
+theme: umami
+region: content_bottom
+weight: 0
+provider: null
+plugin: recombee_tracker
+settings:
+  id: recombee_tracker
+  label: 'Recombee Tracker'
+  provider: recombee
+  label_display: visible
+visibility: {  }

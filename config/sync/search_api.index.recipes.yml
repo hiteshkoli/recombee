@@ -1,0 +1,52 @@
+uuid: f629f861-4a4d-4cff-8527-13bccea99bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - search_api.server.recombee_search_server
+  module:
+    - node
+    - search_api
+id: recipes
+name: Recipes
+description: ''
+read_only: false
+field_settings:
+  processed:
+    label: 'Summary » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_summary:processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_summary
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - recipe
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: recombee_search_server
