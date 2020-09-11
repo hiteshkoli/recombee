@@ -9,7 +9,7 @@ dependencies:
 id: recombeetracker
 theme: umami
 region: content_bottom
-weight: 0
+weight: -7
 provider: null
 plugin: recombee_tracker
 settings:

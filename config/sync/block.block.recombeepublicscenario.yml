@@ -1,0 +1,33 @@
+uuid: 25c9aa3d-0db7-48e0-af12-031acb1fe880
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - recombee
+  theme:
+    - umami
+id: recombeepublicscenario
+theme: umami
+region: content_bottom
+weight: -9
+provider: null
+plugin: recombee_public_scenario
+settings:
+  id: recombee_public_scenario
+  label: 'Recombee Public Scenario'
+  provider: recombee
+  label_display: visible
+  endpoint: items-to-user
+  scenario: items_to_user
+  template: recombee_titles
+  page_size: '3'
+  tracking: true
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      recipe: recipe
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
