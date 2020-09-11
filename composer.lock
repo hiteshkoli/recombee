@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de90a7245052ef1c899890d86404849a",
+    "content-hash": "82c5f3e4dfdd2c4b899349a0f4e5f84f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3325,6 +3325,65 @@
             "time": "2020-09-06T13:44:32+00:00"
         },
         {
+            "name": "fxp/composer-asset-plugin",
+            "version": "v1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fxpio/composer-asset-plugin.git",
+                "reference": "886ece037849d3935c5a34cdcd984e46f2de5fae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fxpio/composer-asset-plugin/zipball/886ece037849d3935c5a34cdcd984e46f2de5fae",
+                "reference": "886ece037849d3935c5a34cdcd984e46f2de5fae",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "composer/composer": "^1.6.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Fxp\\Composer\\AssetPlugin\\FxpAssetPlugin",
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fxp\\Composer\\AssetPlugin\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Pluchino",
+                    "email": "francois.pluchino@gmail.com"
+                }
+            ],
+            "description": "NPM/Bower Dependency Manager for Composer",
+            "homepage": "https://github.com/fxpio/composer-asset-plugin",
+            "keywords": [
+                "asset",
+                "bower",
+                "composer",
+                "dependency manager",
+                "nodejs",
+                "npm",
+                "package"
+            ],
+            "time": "2019-08-08T18:36:07+00:00"
+        },
+        {
             "name": "grasmash/expander",
             "version": "1.0.0",
             "source": {
@@ -4096,6 +4155,455 @@
                 "php"
             ],
             "time": "2020-08-30T16:15:20+00:00"
+        },
+        {
+            "name": "npm-asset/handlebars",
+            "version": "4.7.6",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/handlebars/-/handlebars-4.7.6.tgz",
+                "shasum": "d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
+            },
+            "require": {
+                "npm-asset/minimist": ">=1.2.5,<2.0.0",
+                "npm-asset/neo-async": ">=2.6.0,<3.0.0",
+                "npm-asset/source-map": ">=0.6.1,<0.7.0",
+                "npm-asset/uglify-js": ">=3.1.4,<4.0.0",
+                "npm-asset/wordwrap": ">=1.0.0,<2.0.0"
+            },
+            "bin": {
+                "handlebars": "bin/handlebars"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/wycats/handlebars.js/issues"
+                },
+                "npm-asset-main": "lib/index.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/wycats/handlebars.js.git"
+                },
+                "npm-asset-scripts": {
+                    "format": "prettier --write '**/*.js' && eslint --fix .",
+                    "check-format": "prettier --check '**/*.js'",
+                    "lint": "eslint --max-warnings 0 .",
+                    "dtslint": "dtslint types",
+                    "test": "grunt",
+                    "extensive-tests-and-publish-to-aws": "npx mocha tasks/task-tests/ && grunt --stack extensive-tests-and-publish-to-aws",
+                    "integration-test": "grunt integration-tests",
+                    "--- combined tasks ---": "",
+                    "check-before-pull-request": "concurrently --kill-others-on-fail npm:lint npm:dtslint npm:check-format npm:test"
+                },
+                "npm-asset-optional-dependencies": {
+                    "uglify-js": "^3.1.4"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.4.7"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yehuda Katz"
+                }
+            ],
+            "description": "Handlebars provides the power necessary to let you build semantic templates effectively with no frustration",
+            "homepage": "http://www.handlebarsjs.com/",
+            "keywords": [
+                "handlebars",
+                "html",
+                "mustache",
+                "template"
+            ],
+            "time": "2020-04-03T17:59:55+00:00"
+        },
+        {
+            "name": "npm-asset/minimist",
+            "version": "1.2.5",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+                "shasum": "67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/substack/minimist/issues"
+                },
+                "npm-asset-main": "index.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/substack/minimist.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "tap test/*.js",
+                    "coverage": "covert test/*.js"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Halliday",
+                    "email": "mail@substack.net",
+                    "url": "http://substack.net"
+                }
+            ],
+            "description": "parse argument options",
+            "homepage": "https://github.com/substack/minimist",
+            "keywords": [
+                "argv",
+                "getopt",
+                "optimist",
+                "parser"
+            ],
+            "time": "2020-03-12T22:16:19+00:00"
+        },
+        {
+            "name": "npm-asset/neo-async",
+            "version": "2.6.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz",
+                "shasum": "b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/suguru03/neo-async/issues"
+                },
+                "npm-asset-main": "async.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+ssh://git@github.com/suguru03/neo-async.git"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Neo-Async is a drop-in replacement for Async, it almost fully covers its functionality and runs faster ",
+            "homepage": "https://github.com/suguru03/neo-async",
+            "keywords": [
+                "async",
+                "util"
+            ],
+            "time": "2020-07-09T18:23:53+00:00"
+        },
+        {
+            "name": "npm-asset/source-map",
+            "version": "0.6.1",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+                "shasum": "74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/mozilla/source-map/issues"
+                },
+                "npm-asset-files": [
+                    "source-map.js",
+                    "source-map.d.ts",
+                    "lib/",
+                    "dist/source-map.debug.js",
+                    "dist/source-map.js",
+                    "dist/source-map.min.js",
+                    "dist/source-map.min.js.map"
+                ],
+                "npm-asset-main": "./source-map.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+ssh://git@github.com/mozilla/source-map.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "npm run build && node test/run-tests.js",
+                    "build": "webpack --color",
+                    "toc": "doctoc --title '## Table of Contents' README.md && doctoc --title '## Table of Contents' CONTRIBUTING.md"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.10.0"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nick Fitzgerald",
+                    "email": "nfitzgerald@mozilla.com"
+                },
+                {
+                    "name": "Tobias Koppers",
+                    "email": "tobias.koppers@googlemail.com"
+                },
+                {
+                    "name": "Duncan Beevers",
+                    "email": "duncan@dweebd.com"
+                },
+                {
+                    "name": "Stephen Crane",
+                    "email": "scrane@mozilla.com"
+                },
+                {
+                    "name": "Ryan Seddon",
+                    "email": "seddon.ryan@gmail.com"
+                },
+                {
+                    "name": "Miles Elam",
+                    "email": "miles.elam@deem.com"
+                },
+                {
+                    "name": "Mihai Bazon",
+                    "email": "mihai.bazon@gmail.com"
+                },
+                {
+                    "name": "Michael Ficarra",
+                    "email": "github.public.email@michael.ficarra.me"
+                },
+                {
+                    "name": "Todd Wolfson",
+                    "email": "todd@twolfson.com"
+                },
+                {
+                    "name": "Alexander Solovyov",
+                    "email": "alexander@solovyov.net"
+                },
+                {
+                    "name": "Felix Gnass",
+                    "email": "fgnass@gmail.com"
+                },
+                {
+                    "name": "Conrad Irwin",
+                    "email": "conrad.irwin@gmail.com"
+                },
+                {
+                    "name": "usrbincc",
+                    "email": "usrbincc@yahoo.com"
+                },
+                {
+                    "name": "David Glasser",
+                    "email": "glasser@davidglasser.net"
+                },
+                {
+                    "name": "Chase Douglas",
+                    "email": "chase@newrelic.com"
+                },
+                {
+                    "name": "Evan Wallace",
+                    "email": "evan.exe@gmail.com"
+                },
+                {
+                    "name": "Heather Arthur",
+                    "email": "fayearthur@gmail.com"
+                },
+                {
+                    "name": "Hugh Kennedy",
+                    "email": "hughskennedy@gmail.com"
+                },
+                {
+                    "name": "David Glasser",
+                    "email": "glasser@davidglasser.net"
+                },
+                {
+                    "name": "Simon Lydell",
+                    "email": "simon.lydell@gmail.com"
+                },
+                {
+                    "name": "Jmeas Smith",
+                    "email": "jellyes2@gmail.com"
+                },
+                {
+                    "name": "Michael Z Goddard",
+                    "email": "mzgoddard@gmail.com"
+                },
+                {
+                    "name": "azu",
+                    "email": "azu@users.noreply.github.com"
+                },
+                {
+                    "name": "John Gozde",
+                    "email": "john@gozde.ca"
+                },
+                {
+                    "name": "Adam Kirkton",
+                    "email": "akirkton@truefitinnovation.com"
+                },
+                {
+                    "name": "Chris Montgomery",
+                    "email": "christopher.montgomery@dowjones.com"
+                },
+                {
+                    "name": "J. Ryan Stinnett",
+                    "email": "jryans@gmail.com"
+                },
+                {
+                    "name": "Jack Herrington",
+                    "email": "jherrington@walmartlabs.com"
+                },
+                {
+                    "name": "Chris Truter",
+                    "email": "jeffpalentine@gmail.com"
+                },
+                {
+                    "name": "Daniel Espeset",
+                    "email": "daniel@danielespeset.com"
+                },
+                {
+                    "name": "Jamie Wong",
+                    "email": "jamie.lf.wong@gmail.com"
+                },
+                {
+                    "name": "Eddy Bruël",
+                    "email": "ejpbruel@mozilla.com"
+                },
+                {
+                    "name": "Hawken Rives",
+                    "email": "hawkrives@gmail.com"
+                },
+                {
+                    "name": "Gilad Peleg",
+                    "email": "giladp007@gmail.com"
+                },
+                {
+                    "name": "djchie",
+                    "email": "djchie.dev@gmail.com"
+                },
+                {
+                    "name": "Gary Ye",
+                    "email": "garysye@gmail.com"
+                },
+                {
+                    "name": "Nicolas Lalevée",
+                    "email": "nicolas.lalevee@hibnet.org"
+                }
+            ],
+            "description": "Generates and consumes source maps",
+            "homepage": "https://github.com/mozilla/source-map",
+            "time": "2017-09-29T14:42:30+00:00"
+        },
+        {
+            "name": "npm-asset/uglify-js",
+            "version": "3.10.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.4.tgz",
+                "shasum": "dd680f5687bc0d7a93b14a3482d16db6eba2bfbb"
+            },
+            "bin": {
+                "uglifyjs": "bin/uglifyjs"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/mishoo/UglifyJS/issues"
+                },
+                "npm-asset-main": "tools/node.js",
+                "npm-asset-directories": [],
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git+https://github.com/mishoo/UglifyJS.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "node test/compress.js && node test/mocha.js"
+                },
+                "npm-asset-engines": {
+                    "node": ">=0.8.0"
+                }
+            },
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mihai Bazon",
+                    "email": "mihai.bazon@gmail.com",
+                    "url": "http://lisperator.net/"
+                }
+            ],
+            "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+            "homepage": "https://github.com/mishoo/UglifyJS#readme",
+            "keywords": [
+                "cli",
+                "compress",
+                "compressor",
+                "ecma",
+                "ecmascript",
+                "es",
+                "es5",
+                "javascript",
+                "js",
+                "jsmin",
+                "min",
+                "minification",
+                "minifier",
+                "minify",
+                "optimize",
+                "optimizer",
+                "pack",
+                "packer",
+                "parse",
+                "parser",
+                "uglifier",
+                "uglify"
+            ],
+            "time": "2020-09-06T17:47:53+00:00"
+        },
+        {
+            "name": "npm-asset/wordwrap",
+            "version": "1.0.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz",
+                "shasum": "27584810891456a4171c8d0226441ade90cbcaeb"
+            },
+            "type": "npm-asset-library",
+            "extra": {
+                "npm-asset-bugs": {
+                    "url": "https://github.com/substack/node-wordwrap/issues"
+                },
+                "npm-asset-main": "./index.js",
+                "npm-asset-directories": {
+                    "lib": ".",
+                    "example": "example",
+                    "test": "test"
+                },
+                "npm-asset-repository": {
+                    "type": "git",
+                    "url": "git://github.com/substack/node-wordwrap.git"
+                },
+                "npm-asset-scripts": {
+                    "test": "expresso"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Halliday",
+                    "email": "mail@substack.net",
+                    "url": "http://substack.net"
+                }
+            ],
+            "description": "Wrap those words. Show them at what columns to start and stop.",
+            "homepage": "https://github.com/substack/node-wordwrap#readme",
+            "keywords": [
+                "column",
+                "format",
+                "rule",
+                "word",
+                "wrap"
+            ],
+            "time": "2015-05-07T17:07:25+00:00"
         },
         {
             "name": "oomphinc/composer-installers-extender",

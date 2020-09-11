@@ -28,6 +28,8 @@
         "drupal/recombee": "^1.0",
         "drupal/search_api_recombee": "^1.0",
         "drush/drush": "^9.7.1 | ^10.0.0",
+        "fxp/composer-asset-plugin": "^1.4",
+        "npm-asset/handlebars": "~4.7.6",
         "oomphinc/composer-installers-extender": "^2.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
@@ -73,6 +75,9 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "web/libraries"
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
